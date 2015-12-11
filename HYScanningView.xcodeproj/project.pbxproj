@@ -15,6 +15,7 @@
 		9E1949651C1A69C60001C590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1949631C1A69C60001C590 /* LaunchScreen.storyboard */; };
 		9E1949701C1A69C70001C590 /* HYScanningViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19496F1C1A69C70001C590 /* HYScanningViewTests.m */; };
 		9E19497B1C1A69C70001C590 /* HYScanningViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19497A1C1A69C70001C590 /* HYScanningViewUITests.m */; };
+		9E19498A1C1A69E20001C590 /* HYScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1949891C1A69E20001C590 /* HYScanningView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		9E1949761C1A69C70001C590 /* HYScanningViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYScanningViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E19497A1C1A69C70001C590 /* HYScanningViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYScanningViewUITests.m; sourceTree = "<group>"; };
 		9E19497C1C1A69C70001C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E1949881C1A69E20001C590 /* HYScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScanningView.h; sourceTree = "<group>"; };
+		9E1949891C1A69E20001C590 /* HYScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScanningView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				9E1949591C1A69C60001C590 /* AppDelegate.m */,
 				9E19495B1C1A69C60001C590 /* ViewController.h */,
 				9E19495C1C1A69C60001C590 /* ViewController.m */,
+				9E1949881C1A69E20001C590 /* HYScanningView.h */,
+				9E1949891C1A69E20001C590 /* HYScanningView.m */,
 				9E19495E1C1A69C60001C590 /* Main.storyboard */,
 				9E1949611C1A69C60001C590 /* Assets.xcassets */,
 				9E1949631C1A69C60001C590 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E19498A1C1A69E20001C590 /* HYScanningView.m in Sources */,
 				9E19495D1C1A69C60001C590 /* ViewController.m in Sources */,
 				9E19495A1C1A69C60001C590 /* AppDelegate.m in Sources */,
 				9E1949571C1A69C60001C590 /* main.m in Sources */,

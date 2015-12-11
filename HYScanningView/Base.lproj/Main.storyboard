@@ -1,25 +1,98 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Delegate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aek-bt-eVR">
+                                <rect key="frame" x="26" y="50" width="262" height="29"/>
+                                <segments>
+                                    <segment title="二维码"/>
+                                    <segment title="条形码"/>
+                                    <segment title="二维码条形码"/>
+                                </segments>
+                                <connections>
+                                    <action selector="touchSegmenedControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="gMT-Kl-fhZ"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Obv-qN-pQT" customClass="HYScanningView">
+                                <rect key="frame" x="60" y="184" width="200" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Obv-qN-pQT" secondAttribute="height" multiplier="1:1" id="3jm-B1-38y"/>
+                                    <constraint firstAttribute="width" secondItem="Obv-qN-pQT" secondAttribute="height" multiplier="1:1" id="Ucn-GQ-8yn"/>
+                                    <constraint firstAttribute="width" constant="200" id="Y56-VQ-zvN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="boxBorderColor">
+                                        <color key="value" red="0.28235294119999998" green="0.68627450980000004" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="scanningLineColor">
+                                        <color key="value" red="0.28235294119999998" green="0.68627450980000004" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="boxBorderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="boxSize">
+                                        <size key="value" width="100" height="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="type">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="rect" keyPath="boxFrame">
+                                        <rect key="value" x="50" y="50" width="100" height="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="coverColor">
+                                        <color key="value" red="0.39215686274509803" green="0.39215686274509803" blue="0.78431372549019607" alpha="0.5" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3jm-B1-38y"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xHV-n9-ht8"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bq-YH-Zhp">
+                                <rect key="frame" x="137" y="538" width="46" height="30"/>
+                                <state key="normal" title="扫描"/>
+                                <connections>
+                                    <action selector="touchScanningButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="17p-3i-Vbg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Obv-qN-pQT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DDh-q7-kYa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0Bq-YH-Zhp" secondAttribute="bottom" id="Zko-je-Jb9"/>
+                            <constraint firstItem="Obv-qN-pQT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ieS-F0-nWK"/>
+                            <constraint firstItem="0Bq-YH-Zhp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ss0-TB-TvV"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="scanningView" destination="Obv-qN-pQT" id="RCI-vi-7qK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="313"/>
         </scene>
     </scenes>
 </document>
