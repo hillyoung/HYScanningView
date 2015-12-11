@@ -88,7 +88,7 @@
         _output = [[AVCaptureMetadataOutput alloc] init];
 
         [_captureSession addOutput:_output];
-        [_output setMetadataObjectTypes:[self arrayTranslateType]];
+        [self updateOutputMetadataObjectTypes];
         dispatch_queue_t dispatchQueue;
         dispatchQueue = dispatch_queue_create("ScanningQueue", NULL);
         [_output setMetadataObjectsDelegate:self queue:dispatchQueue];
@@ -128,7 +128,7 @@
 - (void)setType:(HYScanningViewType)type {
     _type = type;
 
-    _output.metadataObjectTypes = [self arrayTranslateType];
+    [self updateOutputMetadataObjectTypes];
 }
 
 - (UIColor *)coverColor {
@@ -177,6 +177,17 @@
 - (void)updateOutputRectOfInterest {
     CGRect rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
     _output.rectOfInterest = rectOfInterest;
+}
+
+- (void)updateOutputMetadataObjectTypes {
+
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (status == AVAuthorizationStatusDenied ||
+        status == AVAuthorizationStatusRestricted) {
+        NSLog(@"请检测相机权限");
+        return;
+    }
+    _output.metadataObjectTypes = [self arrayTranslateType];
 }
 
 - (void)updatePathWithBoxFrame:(CGRect)frame {
@@ -233,6 +244,13 @@
 #pragma mark - Message
 
 - (void)startScanning {
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if (status == AVAuthorizationStatusDenied ||
+        status == AVAuthorizationStatusRestricted) {
+        NSLog(@"请检测相机权限");
+        return;
+    }
+    
     if (!self.isReading) {
         self.reading = YES;
         [self.captureSession startRunning];
