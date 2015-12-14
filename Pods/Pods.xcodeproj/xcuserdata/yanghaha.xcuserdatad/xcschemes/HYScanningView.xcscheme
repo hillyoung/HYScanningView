@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F0E9CDCF68B563E8F9F1AA1A'
-               BlueprintName = 'Pods'
+               BlueprintIdentifier = 'CC3150CA7D982C0F26FFFB66'
+               BlueprintName = 'HYScanningView'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods.a'>
+               BuildableName = 'libHYScanningView.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

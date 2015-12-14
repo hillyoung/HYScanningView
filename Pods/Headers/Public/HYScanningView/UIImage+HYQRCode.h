@@ -1,0 +1,1 @@
+../../../HYScanningView/HYScanningView/HYScanningView/UIImage+HYQRCode.h

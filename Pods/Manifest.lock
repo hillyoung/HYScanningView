@@ -10,10 +10,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   HYScanningView:
-    :commit: b11533a268e7a4f3f1fa0d2e707c80c1c3c25479
+    :commit: 1c2d0001fc15a92bd7fd17c27284b8798a8d7d4c
     :git: https://github.com/yanghaha/HYScanningView.git
 
 SPEC CHECKSUMS:
-  HYScanningView: 04b9388fd5bb5d1584f8524d8c6737e0d4bbc1c1
+  HYScanningView: 882e8dd06e9f8280aec429b4d43183d83eef2425
 
 COCOAPODS: 0.39.0

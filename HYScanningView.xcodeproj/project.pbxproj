@@ -17,8 +17,6 @@
 		9E1949701C1A69C70001C590 /* HYScanningViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19496F1C1A69C70001C590 /* HYScanningViewTests.m */; };
 		9E19497B1C1A69C70001C590 /* HYScanningViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19497A1C1A69C70001C590 /* HYScanningViewUITests.m */; };
 		9EF1BE0D1C1E88D600CB57BE /* EncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE0C1C1E88D600CB57BE /* EncodeViewController.m */; };
-		9EF1BE131C1EB92200CB57BE /* HYScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE101C1EB92200CB57BE /* HYScanningView.m */; };
-		9EF1BE141C1EB92200CB57BE /* UIImage+HYQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,10 +56,6 @@
 		9E19497C1C1A69C70001C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EF1BE0B1C1E88D600CB57BE /* EncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeViewController.h; sourceTree = "<group>"; };
 		9EF1BE0C1C1E88D600CB57BE /* EncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeViewController.m; sourceTree = "<group>"; };
-		9EF1BE0F1C1EB92200CB57BE /* HYScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScanningView.h; sourceTree = "<group>"; };
-		9EF1BE101C1EB92200CB57BE /* HYScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScanningView.m; sourceTree = "<group>"; };
-		9EF1BE111C1EB92200CB57BE /* UIImage+HYQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HYQRCode.h"; sourceTree = "<group>"; };
-		9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HYQRCode.m"; sourceTree = "<group>"; };
 		CB1D941C826943DE8C4D7A05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB98E490F6A42F535C5B6263 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,7 +120,6 @@
 		9E1949541C1A69C60001C590 /* HYScanningView */ = {
 			isa = PBXGroup;
 			children = (
-				9EF1BE0E1C1EB92200CB57BE /* HYScanningView */,
 				9E1949581C1A69C60001C590 /* AppDelegate.h */,
 				9E1949591C1A69C60001C590 /* AppDelegate.m */,
 				9EF1BE0B1C1E88D600CB57BE /* EncodeViewController.h */,
@@ -166,17 +159,6 @@
 				9E19497C1C1A69C70001C590 /* Info.plist */,
 			);
 			path = HYScanningViewUITests;
-			sourceTree = "<group>";
-		};
-		9EF1BE0E1C1EB92200CB57BE /* HYScanningView */ = {
-			isa = PBXGroup;
-			children = (
-				9EF1BE0F1C1EB92200CB57BE /* HYScanningView.h */,
-				9EF1BE101C1EB92200CB57BE /* HYScanningView.m */,
-				9EF1BE111C1EB92200CB57BE /* UIImage+HYQRCode.h */,
-				9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */,
-			);
-			path = HYScanningView;
 			sourceTree = "<group>";
 		};
 		DF7D9E6BB45E788CBFD1F31E /* Frameworks */ = {
@@ -372,8 +354,6 @@
 				9E19495A1C1A69C60001C590 /* AppDelegate.m in Sources */,
 				9E1949571C1A69C60001C590 /* main.m in Sources */,
 				9EF1BE0D1C1E88D600CB57BE /* EncodeViewController.m in Sources */,
-				9EF1BE141C1EB92200CB57BE /* UIImage+HYQRCode.m in Sources */,
-				9EF1BE131C1EB92200CB57BE /* HYScanningView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

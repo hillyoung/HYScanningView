@@ -14,7 +14,7 @@
   },
   "source_files": [
     "Classes",
-    "Classes/**/*.{h,m}"
+    "HYScanningView/HYScanningView/*.{h,m}"
   ],
   "exclude_files": "Classes/Exclude"
 }
