@@ -21,6 +21,10 @@ typedef enum : NSUInteger {
     HYScanningViewTypeQRBar,
 } HYScanningViewType;
 
+/**
+ 提供对二维码，条形码的扫描支持的控件
+ 需要注意：因为用到了定时器，当不需要用到这个view的时候，需要调用stopScanning方法，要不然对象不会施放
+ */
 @interface HYScanningView : UIView
 
 @property (nonatomic, weak) IBOutlet id<HYScanningViewDelegate> delegate;

@@ -31,6 +31,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    [_scanningView stopScanning];
+}
 
 
 - (IBAction)touchSegmenedControl:(UISegmentedControl *)sender {
@@ -62,7 +65,6 @@
         [alertController addAction:confirm];
         [self presentViewController:alertController animated:YES completion:nil];
     }
-    
 }
 
 @end

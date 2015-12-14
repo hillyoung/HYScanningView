@@ -52,12 +52,16 @@
     [self updateUI];
 
     if (self.autoRead) {
-        [self performSelector:@selector(startScanning) withObject:nil afterDelay:1.];
+        [self startScanning];
     }
 }
 
 - (void)didMoveToSuperview {
 
+}
+
+- (void)dealloc {
+    
 }
 
 #pragma mark - Setter & Getter
@@ -89,8 +93,7 @@
 
         [_captureSession addOutput:_output];
         [self updateOutputMetadataObjectTypes];
-        dispatch_queue_t dispatchQueue;
-        dispatchQueue = dispatch_queue_create("ScanningQueue", NULL);
+        dispatch_queue_t dispatchQueue = dispatch_queue_create("ScanningQueue", NULL);
         [_output setMetadataObjectsDelegate:self queue:dispatchQueue];
     }
 
@@ -140,6 +143,14 @@
     return _coverColor;
 }
 
+- (CGRect)boxFrame {
+    if (CGRectIsEmpty(_boxFrame)) {
+        _boxFrame = self.bounds;
+    }
+
+    return _boxFrame;
+}
+
 #pragma mark - Private
 
 - (void)setupUI {
@@ -157,7 +168,11 @@
     /*由于下面第一行代码需要在self.videoPreviewLayer完成显示的时候才能获取正确的rect，
     所以此处进行了延迟执行代码 */
     //    CGRect rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
+#if 1
     [self performSelector:@selector(updateOutputRectOfInterest) withObject:nil afterDelay:1.];
+#else
+    [self fixRectOfInterestZero];
+#endif
 //    CGRect rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
 //    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[_output methodSignatureForSelector:@selector(setRectOfInterest:)]];
 //    invocation.target = _output;
@@ -239,6 +254,26 @@
     }
 
     return @[AVMetadataObjectTypeQRCode];
+}
+
+//解决AVCaptureVideoPreviewLayer调用metadataOutputRectOfInterestForRect获取RectOfInterest为零的bug
+- (void)fixRectOfInterestZero {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+
+
+        CGRect rectOfInterest = CGRectZero;
+
+        while (CGRectIsEmpty(rectOfInterest)) {
+            rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _output.rectOfInterest = rectOfInterest;
+            if (self.autoRead) {
+                [self startScanning];
+            }
+        });
+    });
 }
 
 #pragma mark - Message
