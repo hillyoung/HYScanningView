@@ -1,0 +1,19 @@
+PODS:
+  - HYScanningView (0.0.1)
+
+DEPENDENCIES:
+  - HYScanningView (from `https://github.com/yanghaha/HYScanningView.git`)
+
+EXTERNAL SOURCES:
+  HYScanningView:
+    :git: https://github.com/yanghaha/HYScanningView.git
+
+CHECKOUT OPTIONS:
+  HYScanningView:
+    :commit: b11533a268e7a4f3f1fa0d2e707c80c1c3c25479
+    :git: https://github.com/yanghaha/HYScanningView.git
+
+SPEC CHECKSUMS:
+  HYScanningView: 04b9388fd5bb5d1584f8524d8c6737e0d4bbc1c1
+
+COCOAPODS: 0.39.0

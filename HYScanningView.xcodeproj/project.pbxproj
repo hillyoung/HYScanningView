@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CD0CB07D8ECA669998E7FAD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB98E490F6A42F535C5B6263 /* libPods.a */; };
 		9E1949571C1A69C60001C590 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1949561C1A69C60001C590 /* main.m */; };
 		9E19495A1C1A69C60001C590 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1949591C1A69C60001C590 /* AppDelegate.m */; };
 		9E19495D1C1A69C60001C590 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19495C1C1A69C60001C590 /* ViewController.m */; };
@@ -15,9 +16,9 @@
 		9E1949651C1A69C60001C590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E1949631C1A69C60001C590 /* LaunchScreen.storyboard */; };
 		9E1949701C1A69C70001C590 /* HYScanningViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19496F1C1A69C70001C590 /* HYScanningViewTests.m */; };
 		9E19497B1C1A69C70001C590 /* HYScanningViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E19497A1C1A69C70001C590 /* HYScanningViewUITests.m */; };
-		9E19498A1C1A69E20001C590 /* HYScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E1949891C1A69E20001C590 /* HYScanningView.m */; };
-		9EF1BE0A1C1E876100CB57BE /* UIImage+HYQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE091C1E876100CB57BE /* UIImage+HYQRCode.m */; };
 		9EF1BE0D1C1E88D600CB57BE /* EncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE0C1C1E88D600CB57BE /* EncodeViewController.m */; };
+		9EF1BE131C1EB92200CB57BE /* HYScanningView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE101C1EB92200CB57BE /* HYScanningView.m */; };
+		9EF1BE141C1EB92200CB57BE /* UIImage+HYQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F7B0A5AD71B4706E3815A36 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9E1949521C1A69C60001C590 /* HYScanningView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYScanningView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E1949561C1A69C60001C590 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9E1949581C1A69C60001C590 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,12 +56,14 @@
 		9E1949761C1A69C70001C590 /* HYScanningViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYScanningViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E19497A1C1A69C70001C590 /* HYScanningViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYScanningViewUITests.m; sourceTree = "<group>"; };
 		9E19497C1C1A69C70001C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9E1949881C1A69E20001C590 /* HYScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScanningView.h; sourceTree = "<group>"; };
-		9E1949891C1A69E20001C590 /* HYScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScanningView.m; sourceTree = "<group>"; };
-		9EF1BE081C1E876100CB57BE /* UIImage+HYQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HYQRCode.h"; sourceTree = "<group>"; };
-		9EF1BE091C1E876100CB57BE /* UIImage+HYQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HYQRCode.m"; sourceTree = "<group>"; };
 		9EF1BE0B1C1E88D600CB57BE /* EncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeViewController.h; sourceTree = "<group>"; };
 		9EF1BE0C1C1E88D600CB57BE /* EncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeViewController.m; sourceTree = "<group>"; };
+		9EF1BE0F1C1EB92200CB57BE /* HYScanningView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYScanningView.h; sourceTree = "<group>"; };
+		9EF1BE101C1EB92200CB57BE /* HYScanningView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYScanningView.m; sourceTree = "<group>"; };
+		9EF1BE111C1EB92200CB57BE /* UIImage+HYQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HYQRCode.h"; sourceTree = "<group>"; };
+		9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HYQRCode.m"; sourceTree = "<group>"; };
+		CB1D941C826943DE8C4D7A05 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		FB98E490F6A42F535C5B6263 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CD0CB07D8ECA669998E7FAD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1883A9F694EF523C0DE069BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F7B0A5AD71B4706E3815A36 /* Pods.debug.xcconfig */,
+				CB1D941C826943DE8C4D7A05 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9E1949491C1A69C60001C590 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +108,8 @@
 				9E19496E1C1A69C70001C590 /* HYScanningViewTests */,
 				9E1949791C1A69C70001C590 /* HYScanningViewUITests */,
 				9E1949531C1A69C60001C590 /* Products */,
+				1883A9F694EF523C0DE069BD /* Pods */,
+				DF7D9E6BB45E788CBFD1F31E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,16 +126,13 @@
 		9E1949541C1A69C60001C590 /* HYScanningView */ = {
 			isa = PBXGroup;
 			children = (
-				9EF1BE081C1E876100CB57BE /* UIImage+HYQRCode.h */,
-				9EF1BE091C1E876100CB57BE /* UIImage+HYQRCode.m */,
+				9EF1BE0E1C1EB92200CB57BE /* HYScanningView */,
 				9E1949581C1A69C60001C590 /* AppDelegate.h */,
 				9E1949591C1A69C60001C590 /* AppDelegate.m */,
 				9EF1BE0B1C1E88D600CB57BE /* EncodeViewController.h */,
 				9EF1BE0C1C1E88D600CB57BE /* EncodeViewController.m */,
 				9E19495B1C1A69C60001C590 /* ViewController.h */,
 				9E19495C1C1A69C60001C590 /* ViewController.m */,
-				9E1949881C1A69E20001C590 /* HYScanningView.h */,
-				9E1949891C1A69E20001C590 /* HYScanningView.m */,
 				9E19495E1C1A69C60001C590 /* Main.storyboard */,
 				9E1949611C1A69C60001C590 /* Assets.xcassets */,
 				9E1949631C1A69C60001C590 /* LaunchScreen.storyboard */,
@@ -155,6 +168,25 @@
 			path = HYScanningViewUITests;
 			sourceTree = "<group>";
 		};
+		9EF1BE0E1C1EB92200CB57BE /* HYScanningView */ = {
+			isa = PBXGroup;
+			children = (
+				9EF1BE0F1C1EB92200CB57BE /* HYScanningView.h */,
+				9EF1BE101C1EB92200CB57BE /* HYScanningView.m */,
+				9EF1BE111C1EB92200CB57BE /* UIImage+HYQRCode.h */,
+				9EF1BE121C1EB92200CB57BE /* UIImage+HYQRCode.m */,
+			);
+			path = HYScanningView;
+			sourceTree = "<group>";
+		};
+		DF7D9E6BB45E788CBFD1F31E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB98E490F6A42F535C5B6263 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9E19497F1C1A69C70001C590 /* Build configuration list for PBXNativeTarget "HYScanningView" */;
 			buildPhases = (
+				8519826D1D0CCA787B7F9CFC /* Check Pods Manifest.lock */,
 				9E19494E1C1A69C60001C590 /* Sources */,
 				9E19494F1C1A69C60001C590 /* Frameworks */,
 				9E1949501C1A69C60001C590 /* Resources */,
+				A618B5549AF109EF29176D3B /* Embed Pods Frameworks */,
+				A8B9DA80969AF38831A5AD54 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,17 +315,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8519826D1D0CCA787B7F9CFC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A618B5549AF109EF29176D3B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8B9DA80969AF38831A5AD54 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9E19494E1C1A69C60001C590 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E19498A1C1A69E20001C590 /* HYScanningView.m in Sources */,
 				9E19495D1C1A69C60001C590 /* ViewController.m in Sources */,
 				9E19495A1C1A69C60001C590 /* AppDelegate.m in Sources */,
 				9E1949571C1A69C60001C590 /* main.m in Sources */,
 				9EF1BE0D1C1E88D600CB57BE /* EncodeViewController.m in Sources */,
-				9EF1BE0A1C1E876100CB57BE /* UIImage+HYQRCode.m in Sources */,
+				9EF1BE141C1EB92200CB57BE /* UIImage+HYQRCode.m in Sources */,
+				9EF1BE131C1EB92200CB57BE /* HYScanningView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +510,7 @@
 		};
 		9E1949801C1A69C70001C590 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F7B0A5AD71B4706E3815A36 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYScanningView/Info.plist;
@@ -438,6 +522,7 @@
 		};
 		9E1949811C1A69C70001C590 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB1D941C826943DE8C4D7A05 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = HYScanningView/Info.plist;
