@@ -42,7 +42,7 @@
 
 - (IBAction)touchEncodeButton:(id)sender {
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image = [UIImage qrImageFromString:self.contentTextField.text];
+        UIImage *image = [UIImage qrImageFromString:self.contentTextField.text sideLength:100];
         dispatch_async(dispatch_get_main_queue(), ^{
             self.qrcodeImageView.image = image;
         });

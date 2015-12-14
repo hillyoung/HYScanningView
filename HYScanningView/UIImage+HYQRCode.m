@@ -12,24 +12,24 @@
 
 #pragma mark - encode
 
-+ (UIImage *)qrImageFromString:(NSString *)qrString {
++ (UIImage *)qrImageFromString:(NSString *)qrString sideLength:(CGFloat)length {
     CIImage *ciImage = [UIImage ciImageFromString:qrString];
-    UIImage *image = [UIImage createNonInterpolatedUIImageFormCIImage:ciImage withSize:100];
+    UIImage *image = [UIImage createNonInterpolatedUIImageFormCIImage:ciImage withSize:length];
 
     return image;
 }
 
-+ (UIImage *)qrColorImageFromString:(NSString *)qrString withR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue {
-    UIImage *image = [UIImage qrImageFromString:qrString];
++ (UIImage *)qrColorImageFromString:(NSString *)qrString sideLength:(CGFloat)length withR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue {
+    UIImage *image = [UIImage qrImageFromString:qrString sideLength:length];
     image = [UIImage imageBlackToTransparent:image withRed:red andGreen:green andBlue:blue];
 
     return image;
 }
 
 
-+ (UIImage *)qrColorImageFromString:(NSString *)qrString withColor:(UIColor *)color {
++ (UIImage *)qrColorImageFromString:(NSString *)qrString sideLength:(CGFloat)length withColor:(UIColor *)color {
     const CGFloat *rgb = CGColorGetComponents(color.CGColor);
-    UIImage * image = [UIImage qrColorImageFromString:qrString withR:rgb[0]*255 G:rgb[1]*255 B:rgb[2]*255];
+    UIImage * image = [UIImage qrColorImageFromString:qrString sideLength:length withR:rgb[0]*255 G:rgb[1]*255 B:rgb[2]*255];
 
     return image;
 }

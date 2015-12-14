@@ -14,20 +14,23 @@
 /**
  通过传入内容获取对应的二维码image
  @params qrString 传入内容
+ @params length 传入将要生成的image的大小的边长
  */
-+ (UIImage *)qrImageFromString:(NSString *)qrString;
++ (UIImage *)qrImageFromString:(NSString *)qrString sideLength:(CGFloat)length;
 /**
  通过传入内容获取对应的二维码image， 并设置颜色
  @params qrString 传入内容
+ @params length 传入将要生成的image的大小的边长
  @params rgb 为0~255之间的数值
  */
-+ (UIImage *)qrColorImageFromString:(NSString *)qrString withR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue ;
++ (UIImage *)qrColorImageFromString:(NSString *)qrString sideLength:(CGFloat)length withR:(CGFloat)red G:(CGFloat)green B:(CGFloat)blue;
 /**
  通过传入内容获取对应的二维码image， 并设置颜色
  @params qrString 传入内容
+ @params length 传入将要生成的image的大小的边长
  @params color 传入需要设置的颜色
  */
-+ (UIImage *)qrColorImageFromString:(NSString *)qrString withColor:(UIColor *)color;
++ (UIImage *)qrColorImageFromString:(NSString *)qrString sideLength:(CGFloat)length withColor:(UIColor *)color;
 
 #pragma mark - Decode (调用时,建议在子线程中执行)
 
