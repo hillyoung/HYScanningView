@@ -144,7 +144,7 @@ void ProviderReleaseData (void *info, const void *data, size_t size){
             }
         }
     } else {
-        NSLog(@"未正常解析二维码图片, 请确保iphone5/5c以上的设备");
+        NSLog(@"未正常解析二维码图片, 请确保iphone5/5c以上的设备及二维码图片有效");
     }
 
     return content;
