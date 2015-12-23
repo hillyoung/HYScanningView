@@ -42,7 +42,7 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic) IBInspectable CGRect boxFrame;
 /**
- 识别框的边框颜色
+ 识别框外覆盖的颜色
  */
 @property (nonatomic, strong) IBInspectable UIColor *coverColor;
 /**
