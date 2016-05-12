@@ -45,6 +45,12 @@ typedef enum : NSUInteger {
  识别框的边框颜色
  */
 @property (nonatomic, strong) IBInspectable UIColor *coverColor;
+
+/**
+ *  边角颜色
+ */
+@property (nonatomic, strong) IBInspectable UIColor *cornerColor;
+
 /**
  扫描线的颜色
  */
