@@ -239,6 +239,7 @@
 				TargetAttributes = {
 					9E1949511C1A69C60001C590 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = APK7P89C7N;
 					};
 					9E19496A1C1A69C70001C590 = {
 						CreatedOnToolsVersion = 7.2;
@@ -493,6 +494,7 @@
 			baseConfigurationReference = 8F7B0A5AD71B4706E3815A36 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HYScanningView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuogao.HYScanningView;
@@ -505,6 +507,7 @@
 			baseConfigurationReference = CB1D941C826943DE8C4D7A05 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HYScanningView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shuogao.HYScanningView;
