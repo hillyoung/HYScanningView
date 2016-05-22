@@ -170,8 +170,8 @@
     }
 }
 
-- (void)didMoveToSuperview {
-    
+- (void)drawRect:(CGRect)rect {
+    [self updateOutputRectOfInterest];
 }
 
 - (void)dealloc {
@@ -296,10 +296,11 @@
     /*由于下面第一行代码需要在self.videoPreviewLayer完成显示的时候才能获取正确的rect，
      所以此处进行了延迟执行代码 */
     //    CGRect rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
+
 #if 1
-    [self performSelector:@selector(updateOutputRectOfInterest) withObject:nil afterDelay:1.];
+//    [self performSelector:@selector(updateOutputRectOfInterest) withObject:nil afterDelay:1.];
 #else
-    [self fixRectOfInterestZero];
+//    [self fixRectOfInterestZero];
 #endif
     //    CGRect rectOfInterest = [self.videoPreviewLayer metadataOutputRectOfInterestForRect:self.boxFrame];
     //    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[_output methodSignatureForSelector:@selector(setRectOfInterest:)]];
