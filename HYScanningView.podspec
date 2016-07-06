@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HYScanningView"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = 'A custom view which can scan qrcode and barcode'
 
   s.description  = <<-DESC
@@ -13,9 +13,9 @@ Pod::Spec.new do |s|
 
   s.author       = { 'hillyoung' => '1666487339@qq.com' }
 
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "8.0"
 
-  s.source       = { :git => 'https://github.com/hillyoung/HYScanningView.git', :tag => '0.1.0' }
+  s.source       = { :git => 'https://github.com/hillyoung/HYScanningView.git', :tag => '0.1.1' }
 
   s.source_files  = "Classes", "HYScanningView/HYScanningView/*.{h,m}"
 
